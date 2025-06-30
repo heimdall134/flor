@@ -1,0 +1,77 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+    {
+        title: "Formato a medida",
+        description:
+            "imprimimos el papel según las dimensiones exactas de la pared, evitando desperdicio y rollos innecesarios. Nuestro ancho es de 110 cm, lo que significa menos uniones visibles.",
+        icon: "bx:bxs-ruler",
+    },
+    {
+        title: "Diseños prediseñados",
+        description:
+            "cualquier diseño de nuestro catálogo se puede modificar en color, escala, dirección del patrón, quitar o poner algún elemento.",
+        icon: "bx:bxs-palette",
+    },
+    {
+        title: "Diseños a medida desde cero",
+        description:
+            "si no encuentras lo que buscas, lo creamos contigo. Te acompañamos en todo el proceso creativo.",
+        icon: "bx:bxs-pencil",
+    },
+    {
+        title: "Murales a medida",
+        description:
+            "creamos murales únicos y completamente personalizados para cada pared.",
+        icon: "bx:bxs-image",
+    },
+    {
+        title: "Servicio instalación",
+        description: "dentro de la Comunidad de Madrid.",
+        icon: "bx:bxs-brush",
+    },
+    {
+        title: "Materiales alta calidad",
+        description:
+            "Mate liso (non-woven), Fibroso con textura (non-woven) y Lino (non-woven",
+        icon: "bx:bxs-layer",
+    },
+];
+---
+
+<div class="mt-20">
+    <h1 class="text-lg lg:text-3xl font-bold lg:tracking-tight">
+        Bienvenido a ambientesconarte!
+    </h1>
+    <h2 class="text-lg lg:text-xl font-regular lg:tracking-tight">
+        Realizamos papel pintado personalizado con un enfoque diferente. En
+        lugar de que pierdas tiempo buscando entre miles de catálogos un diseño
+        que encaje con tu espacio, nosotros lo creamos a medida para ti.
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+        Podemos adaptar cualquiera de nuestros diseños en color, escala o
+        patrón. Y si no encuentras lo que buscas, lo creamos desde cero contigo.
+        Además, no usamos rollos estándar: imprimimos justo lo que necesitas
+        según tus medidas, así reduces costes y evitas desperdicio.
+    </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {
+        features.map((item) => (
+            <div class="flex gap-4 items-start">
+                <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                    <Icon class="text-white" name={item.icon} />
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+                    <p class="text-slate-500 mt-2 leading-relaxed">
+                        {item.description}
+                    </p>
+                </div>
+            </div>
+        ))
+    }
+</div>

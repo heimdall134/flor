@@ -1,0 +1,70 @@
+---
+import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
+
+import ambientesconarteLogo from "@/assets/logotipo_papelpersonalizado.svg";
+import banner1 from "@/assets/banner1.jpg";
+import banner2 from "@/assets/banner2.jpg";
+import banner3 from "@/assets/banner3.jpg";
+import banner4 from "@/assets/banner4.jpg";
+
+// List your banner images here
+const images = [banner1, banner2, banner3, banner4];
+
+// Current slide index (Astro doesn't have state, so we use vanilla JS below)
+---
+
+<style>
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+        height: 80vh;
+    }
+</style>
+
+<div class="relative w-full overflow-hidden">
+    <div
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none bg-white/30 px-4 py-2"
+    >
+        <Picture
+            src={ambientesconarteLogo}
+            alt="Ambientes con arte papel pintado personalizado"
+            class=""
+            loading="eager"
+            format="avif"
+        />
+    </div>
+
+    <div id="carousel" class="carousel-track">
+        {
+            images.map((src) => (
+                <Image
+                    src={src}
+                    alt="Banner image"
+                    class="carousel-slide object-cover"
+                    loading="lazy"
+                />
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    const carousel = document.getElementById("carousel");
+    const totalImages = carousel!.children.length;
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        carousel!.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateCarousel();
+    }, 3000);
+</script>

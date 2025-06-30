@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.ambientesconarte.es/*"
+  to = "https://ambientesconarte.es/:splat"
+  status = 301
+  force = true

@@ -1,0 +1,82 @@
+---
+import Container from "@/components/container.astro";
+import ambientesconartelogo from "@/assets/logo_square.svg?url";
+import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+import { Icon } from "astro-icon/components";
+
+const menuitems = [
+    {
+        title: "Catalogo",
+        path: "/catalogo",
+        icon: "bx:bxs-book",
+    },
+    {
+        title: "+34 123 456 789",
+        path: "tel:+34123456789",
+        icon: "bx:bxs-phone",
+    },
+];
+---
+
+<style>
+    .sticky-navbar {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: var(--breakpoint-xl);
+        width: 100%;
+    }
+</style>
+<Container>
+    <StickyHeader
+        class="sticky-navbar top-0 z-20 flex flex-col lg:flex-row justify-between items-center border-b transition-all p-8 lg:p-2"
+        scrollY={20}
+        defaultClass="py-5 bg-white/80 border-transparent"
+        activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+    >
+        <Astronav>
+            <div class="flex w-full lg:w-auto items-center justify-between h-8">
+                <a href="/" title="H">
+                    <img
+                        src={ambientesconartelogo}
+                        alt="Ambientes con arte papel pintado personalizado"
+                        class="h-8 w-auto object-cover"
+                        loading="eager"
+                    />
+                </a>
+                <div class="block lg:hidden">
+                    <MenuIcon class="w-4 h-4 text-gray-800" />
+                </div>
+            </div>
+            <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+                <ul class="flex flex-col lg:flex-row lg:gap-3">
+                    {
+                        menuitems.map((item, index) => (
+                            <>
+                                {
+                                    <li>
+                                        <a
+                                            href={item.path}
+                                            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"
+                                        >
+                                            <span class="flex items-center gap-2">
+                                                <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                                                    <Icon
+                                                        class="text-white"
+                                                        name={item.icon}
+                                                    />
+                                                </div>
+                                                {item.title}
+                                            </span>
+                                        </a>
+                                    </li>
+                                }
+                            </>
+                        ))
+                    }
+                </ul>
+            </MenuItems>
+        </Astronav>
+    </StickyHeader>
+</Container>
