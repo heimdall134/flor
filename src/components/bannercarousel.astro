@@ -2,14 +2,15 @@
 import { Picture } from "astro:assets";
 import { Image } from "astro:assets";
 
-import ambientesconarteLogo from "@/assets/logotipo_papelpersonalizado.svg";
-import banner1 from "@/assets/banner1.jpg";
+import logoFlor from "@/assets/logo.svg";
+import banner1 from "@/assets/banner1.webp";
 import banner2 from "@/assets/banner2.jpg";
 import banner3 from "@/assets/banner3.jpg";
 import banner4 from "@/assets/banner4.jpg";
+import banner5 from "@/assets/banner5.jpg";
 
 // List your banner images here
-const images = [banner1, banner2, banner3, banner4];
+const images = [banner1, banner2, banner3, banner4, banner5];
 
 // Current slide index (Astro doesn't have state, so we use vanilla JS below)
 ---
@@ -28,17 +29,10 @@ const images = [banner1, banner2, banner3, banner4];
 </style>
 
 <div class="relative w-full overflow-hidden">
-    <div
+    <!-- <div
         class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none bg-white/30 px-4 py-2"
     >
-        <Picture
-            src={ambientesconarteLogo}
-            alt="Ambientes con arte papel pintado personalizado"
-            class=""
-            loading="eager"
-            format="avif"
-        />
-    </div>
+    </div> -->
 
     <div id="carousel" class="carousel-track">
         {

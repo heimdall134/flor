@@ -12,30 +12,148 @@ import { Icon } from "astro-icon/components";
     <p class="text-slate-400 mt-4 text-lg md:text-xl">
         Cualquier duda que tengas, siempre estamos disponibles para ayudarte.
     </p>
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-        <div>
-            <h2 class="font-medium text-2xl text-gray-800">
-                Información de contacto
-            </h2>
-            <div class="mt-5">
-                <div class="flex items-center mt-2 space-x-2 text-gray-600">
-                    <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-                    <span>C/ Padre Rubio 6, Bajo Derecho, 28029, Madrid</span>
+    <div class="w-full mt-16">
+        <Contactform />
+    </div>
+</div>
+<div
+    class="p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center"
+>
+    <h2 class="text-black text-4xl md:text-6xl tracking-tight">Sucursales</h2>
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-1 gap-10 w-full">
+        <>
+            <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sucursal 1 - Condesa, CDMX -->
+                <div
+                    class="p-4 bg-[#f9f9f9] rounded-lg shadow text-left space-y-3"
+                >
+                    <h3 class="font-bold">CDMX, Condesa</h3>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+                        <a href="tel:+34614509052">+52 559 130 84 82</a>
+                    </div>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon
+                            class="text-gray-400 w-8 h-8"
+                            name="uil:map-marker"
+                        />
+                        <span
+                            >Av. Veracruz 93, Colonia Condesa, Cuauhtémoc, 06140
+                            Ciudad de México, CDMX, Mexico</span
+                        >
+                    </div>
+                    <div class="aspect-video">
+                        <iframe
+                            class="w-full h-full rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d940.7274955299544!2d-99.173002!3d19.416295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffee290ef185%3A0x29c8111b02bbb3bc!2sFlor!5e0!3m2!1sen!2ses!4v1756469156686!5m2!1sen!2ses"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
-                <div class="flex items-center mt-2 space-x-2 text-gray-600">
-                    <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
-                    <a href="mailto:info@ambientesconarte.com"
-                        >info@ambientesconarte.com</a
-                    >
+
+                <!-- Sucursal 2 - San Pedro, Monterrey -->
+                <div
+                    class="p-4 bg-[#f9f9f9] rounded-lg shadow text-left space-y-3"
+                >
+                    <h3 class="font-bold">Monterrey, NL</h3>
+
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+                        <a href="tel:+34614509052">+52 812 315 77 71</a>
+                    </div>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon
+                            class="text-gray-400 w-8 h-8"
+                            name="uil:map-marker"
+                        />
+                        <span
+                            >Gomez Morin 900 plaza vita, segundo piso,
+                            Carrizalejo, 66254 San Pedro Garza García, N.L.,
+                            Mexico</span
+                        >
+                    </div>
+
+                    <div class="aspect-video">
+                        <iframe
+                            class="w-full h-full rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14387.469244480095!2d-100.361939!3d25.642529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bda82d2ae547%3A0x811495d19f61a13a!2sFLOR%20CARPET%20MONTERREY!5e0!3m2!1sen!2ses!4v1756469559476!5m2!1sen!2ses"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
-                <div class="flex items-center mt-2 space-x-2 text-gray-600">
-                    <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
-                    <a href="tel:+34614509052">+34 614 50 90 52</a>
+
+                <!-- Sucursal 3 - San Luis Potosí, SLP -->
+                <div
+                    class="p-4 bg-[#f9f9f9] rounded-lg shadow text-left space-y-3"
+                >
+                    <h3 class="font-bold">San Luis Potosí, SLP</h3>
+
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+                        <a href="tel:+34614509052">+52 444 833 50 99</a>
+                    </div>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon
+                            class="text-gray-400 w-8 h-8"
+                            name="uil:map-marker"
+                        />
+                        <span
+                            >Graciano Sánchez 220, Lindavista, 78220 San Luis
+                            Potosí, S.L.P., Mexico</span
+                        >
+                    </div>
+
+                    <div class="aspect-video">
+                        <iframe
+                            class="w-full h-full rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3695.347516283173!2d-101.00811000000002!3d22.15084!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9f4e1a021841%3A0x3b2355e45193a2af!2sAmbientes%20Con%20Arte!5e0!3m2!1sen!2ses!4v1756470353274!5m2!1sen!2ses"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- Sucursal 4 - Queretaro, Qro -->
+                <div
+                    class="p-4 bg-[#f9f9f9] rounded-lg shadow text-left space-y-3"
+                >
+                    <h3 class="font-bold">Queretaro, Qro</h3>
+
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+                        <a href="tel:+34614509052">+52 812 315 77 71</a>
+                    </div>
+                    <div class="flex items-center mt-2 space-x-2 text-gray-600">
+                        <Icon
+                            class="text-gray-400 w-8 h-8"
+                            name="uil:map-marker"
+                        />
+                        <span
+                            >Av. de los Santos 1039, Lomas del Campanario Norte,
+                            76146 Santiago de Querétaro, Qro., Mexico</span
+                        >
+                    </div>
+
+                    <div class="aspect-video">
+                        <iframe
+                            class="w-full h-full rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d933.4980668512944!2d-100.339715!3d20.629172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35d707baec8d9%3A0xae1a4a568cbd81f7!2sPUNTO%20LOMAS%20NORTE!5e0!3m2!1sen!2ses!4v1756470449046!5m2!1sen!2ses"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div>
-            <Contactform />
-        </div>
+        </>
     </div>
 </div>

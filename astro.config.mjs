@@ -6,8 +6,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-    // site: "https://ambientesconarte.es",
-    site: "https://wonderful-starburst-2a2deb.netlify.app",
+    // site: "http://floorandcarpetsmx.com/",
+    site: "http://floorandcarpetsmx.com/",
     integrations: [mdx(), sitemap(), icon()],
     vite: {
         plugins: [tailwindcss()],
